@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Physics Simulator App</title>
+  <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
+
+  <script src="PhysicsProjectileApp1.js"></script>
+  <script src="scripts/jquery-1.8.3.min.js">
+  </script>
+  <script src="scripts/chromeFileProtocolFix.js"></script>
+  <script src="scripts/jquery.mobile-1.3.1.min.js">
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div data-role="page">
+    <div data-role=header>Converting fluid measurements</div>
+    <div data-role="content">
+      <label for="gallons">Enter the quantity in gallons:</label>
+      <input type='number' name='gallons' id='gallons' min='0'
+      max='90' placeholder='gallons'>
+      
+      <!-- <label for="velocity">Velocity:</label>
+      <input type='number' name='velocity' id='velocity'
+      min='0' max='299792458' placeholder='In metres/second'> -->
+
+      <br>
+      <button onclick ="display();">Display</button>
+
+      <table id="data">
+        <tr>
+          <td>Quantity Entered:</td>
+          <td id='gallonsDisplay'>0</td>
+          <td>gallons</td>
+        </tr>
+      </table>
+
+
+    </div>
+    <div data-role=footer>
+      <small>
+
+        Fluid quantity converter
+
+      </small>
+    </div>
+  </div>
+</body>
+
+</html>
