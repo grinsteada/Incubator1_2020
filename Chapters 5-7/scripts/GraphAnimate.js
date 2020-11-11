@@ -109,3 +109,48 @@ function labelAxes() {
   ctx.textAlign = "center";
   ctx.fillText("TSH Value", -250, 10);
 }
+
+var canvas = document.getElementById("cylinder");
+var ctx = canvas.getContext("2d");
+drawCylinder(canvas, ctx, "white", "black", 2);
+function drawCylinder(canvas, ctx, fill, border, lineWidth)
+{
+		canvas.width = 160;
+    canvas.height = 175;
+    ctx.translate(25,0);
+    ctx.fillStyle = fill;
+    ctx.lineWidth = lineWidth;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.beginPath();
+    ctx.moveTo(97.0, 156.7);
+    ctx.lineTo(97.0, 17.7);
+    ctx.lineTo(1.0, 17.7);
+    ctx.lineTo(1.0, 156.7);
+    ctx.lineTo(97.0, 156.7);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+    
+    // layer1/Group/Path
+    ctx.beginPath();
+    ctx.moveTo(96.7, 156.2);
+    ctx.bezierCurveTo(96.7, 165.3, 75.4, 172.7, 49.0, 172.7);
+    ctx.bezierCurveTo(22.7, 172.7, 1.4, 165.3, 1.4, 156.2);
+    ctx.bezierCurveTo(1.4, 147.2, 22.7, 139.8, 49.0, 139.8);
+    ctx.bezierCurveTo(75.4, 139.8, 96.7, 147.2, 96.7, 156.2);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+
+    // layer1/Group/Path
+    ctx.beginPath();
+    ctx.moveTo(96.7, 17.4);
+    ctx.bezierCurveTo(96.7, 26.5, 75.4, 33.8, 49.0, 33.8);
+    ctx.bezierCurveTo(22.7, 33.8, 1.4, 26.5, 1.4, 17.4);
+    ctx.bezierCurveTo(1.4, 8.4, 22.7, 1.0, 49.0, 1.0);
+    ctx.bezierCurveTo(75.4, 1.0, 96.7, 8.4, 96.7, 17.4);
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke();
+}
