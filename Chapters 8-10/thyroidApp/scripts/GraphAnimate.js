@@ -110,15 +110,15 @@ var ctx = canvas.getContext("2d");
 drawCylinder(canvas, ctx, "white", "black", 2);
 function drawCylinder(canvas, ctx, fill, border, lineWidth)
 {
-		canvas.width = 160;
-    canvas.height = 175;
+		canvas.width = 360;
+    canvas.height = 275;
     ctx.translate(25,0);
     ctx.fillStyle = fill;
     ctx.lineWidth = lineWidth;
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
     ctx.beginPath();
-    ctx.moveTo(97.0, 156.7);
+    ctx.moveTo(97.0, 56.7);
     ctx.lineTo(97.0, 17.7);
     ctx.lineTo(1.0, 17.7);
     ctx.lineTo(1.0, 156.7);
@@ -126,6 +126,12 @@ function drawCylinder(canvas, ctx, fill, border, lineWidth)
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    ctx.fillStyle = "purple";
+    
+    
+
+    
+      
     
     // layer1/Group/Path
     ctx.beginPath();
@@ -137,6 +143,7 @@ function drawCylinder(canvas, ctx, fill, border, lineWidth)
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    ctx.fillStyle = "green";
 
     // layer1/Group/Path
     ctx.beginPath();
