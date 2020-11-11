@@ -1,6 +1,5 @@
 function drawGraph() {
-  if (localStorage.getItem("tbRecords") ===
-    null) {
+  if (sessionStorage.tbRecords === null) {
     alert("No records exist.");
 
     $(location).attr("href", "#pageMenu");
@@ -22,18 +21,15 @@ function drawGraph() {
 }
 
 function setupCanvas() {
-
   var c = document.getElementById("GraphCanvas");
   var ctx = c.getContext("2d");
 
   ctx.fillStyle = "#FFFFFF";
   ctx.fillRect(0, 0, 500, 500);
-
 }
 
 function getTSHhistory(TSHarr, Datearr) {
-  var tbRecords = JSON.parse(localStorage.getItem(
-    "tbRecords"));
+  var tbRecords = JSON.parse(sessionStorage.tbRecords);
 
   tbRecords.sort(compareDates);
 
@@ -56,9 +52,8 @@ function getTSHhistory(TSHarr, Datearr) {
 
 function getTSHbounds(tshLower, tshUpper) {
   //Get users cancer stage
-  var user = JSON.parse(localStorage.getItem(
-    "user"));
-  var TSHLevel = user.TSHRange;
+  var user = JSON.parse(sessionStorage.user);
+  var TSHLevel = user.tshRange;
 
   /*These lines show upper and lower bounds
    * of acceptable TSH levels (for each
@@ -115,15 +110,15 @@ var ctx = canvas.getContext("2d");
 drawCylinder(canvas, ctx, "white", "black", 2);
 function drawCylinder(canvas, ctx, fill, border, lineWidth)
 {
-		canvas.width = 160;
-    canvas.height = 175;
+		canvas.width = 360;
+    canvas.height = 275;
     ctx.translate(25,0);
     ctx.fillStyle = fill;
     ctx.lineWidth = lineWidth;
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
     ctx.beginPath();
-    ctx.moveTo(97.0, 156.7);
+    ctx.moveTo(97.0, 56.7);
     ctx.lineTo(97.0, 17.7);
     ctx.lineTo(1.0, 17.7);
     ctx.lineTo(1.0, 156.7);
@@ -131,6 +126,12 @@ function drawCylinder(canvas, ctx, fill, border, lineWidth)
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    ctx.fillStyle = "purple";
+    
+    
+
+    
+      
     
     // layer1/Group/Path
     ctx.beginPath();
@@ -142,6 +143,7 @@ function drawCylinder(canvas, ctx, fill, border, lineWidth)
     ctx.closePath();
     ctx.fill();
     ctx.stroke();
+    ctx.fillStyle = "green";
 
     // layer1/Group/Path
     ctx.beginPath();
