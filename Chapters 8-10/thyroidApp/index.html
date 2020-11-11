@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang=en>
 
+//* Amanda Grinstead
+
 <head>
-  <title>Thyroid Cancer Aide</title>
+  <title>Blood Pressure Monitor</title>
 
   <!--Adjusting the page on mobile screen  -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -21,7 +23,7 @@
   <!-- Start of first page -->
   <div data-role="page" id="pageHome">
     <div data-role="header">
-      <h1>Thyroid Cancer Aide</h1>
+      <h1>Blood Pressure Monitor</h1>
     </div>
     <div data-role="content">
       Email:
@@ -83,90 +85,54 @@
     </div>
   </div>
 
-  <!--User Information Page/Form -->
-  <div data-role="page" id="pageUserInfo">
-    <div data-role="header">
-      <a href="#pageMenu" data-role="button" data-icon="bars"
-      data-iconpos="left" data-inline="true">Menu</a>
-      <a href="#pageAbout" data-role="button" data-icon="info"
-      data-iconpos="right" data-inline="true">Info</a>
-      <h1>User Information</h1>
-    </div>
-    <!-- /header -->
-    <div data-role="content">
-      <form id="frmUserForm" action="">
-        <div data-role="fieldcontain">
-          <label for="txtEmail">Email: </label>
-          <input type="email" placeholder="name@example.com"
-          name="txtEmail" data-mini="false" id="txtEmail"
-          value="" required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="txtFirstName">First Name: </label>
-          <input type="text" placeholder="First Name" name="txtFirstName"
-          data-mini="false" id="txtFirstName" value=""
-          required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="txtLastName">Last Name: </label>
-          <input type="text" placeholder="Last Name" name="txtLastName"
-          data-mini="false" id="txtLastName" value=""
-          required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="datBirthdate">Birthdate: </label>
-          <input type="date" name="datBirthdate" data-mini="false"
-          id="datBirthdate" value="" required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="changePassword">Edit Password: </label>
-          <input type="password" placeholder="New Password" name="changePassword"
-          data-mini="false" id="changePassword" value=""
-          required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="txtHealthCardNumber">Health Card Number: </label>
-          <input type="text" placeholder="Health Card Number"
-          name="txtHealthCardNumber" data-mini="false"
-          id="txtHealthCardNumber" value="" required>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="slcCancerType" class="select">Cancer Type: </label>
-          <select name="slcCancerType" id="slcCancerType" data-mini="false"
-          data-native-menu="false" required>
-            <option>Select Cancer Type</option>
-            <option value="Papillary">Papillary</option>
-            <option value="Follicular">Follicular</option>
-            <option value="Medullary">Medullary</option>
-            <option value="Anaplastic">Anaplastic</option>
-          </select>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="slcCancerStage" class="select">Cancer Stage: </label>
-          <select name="slcCancerStage" id="slcCancerStage" data-mini="false"
-          data-native-menu="false" required>
-            <option>Select Cancer Stage</option>
-            <option value="StageOne">Stage I</option>
-            <option value="StageTwo">Stage II</option>
-            <option value="StageThree">Stage III</option>
-            <option value="StageFour">Stage IV</option>
-          </select>
-        </div>
-        <div data-role="fieldcontain">
-          <label for="slcTSHRange" class="select">Target TSH Range: </label>
-          <select name="slcTSHRange" id="slcTSHRange" data-mini="false"
-          data-native-menu="false" required>
-            <option>Select TSH Range</option>
-            <option value="StageA">A: 0.01-0.1 mIU/L</option>
-            <option value="StageB">B: 0.1-0.5 mIU/L</option>
-            <option value="StageC">C: 0.35-2.0 mIU/L</option>
-          </select>
-        </div>
-        <input type="button" id="btnUserUpdate" data-icon="check"
-        data-iconpos="left" value="Update" data-inline="true">
-      </form>
-    </div>
+
+<!--User Information Page/Form -->
+<div data-role="page" id="pageUserInfo">
+  <div data-role="header">
+    <a href="#pageMenu" data-role="button" data-icon="bars"
+    data-iconpos="left" data-inline="true">Menu</a>
+    <a href="#pageAbout" data-role="button" data-icon="info"
+    data-iconpos="right" data-inline="true">Info</a>
+    <h1>User Information</h1>
   </div>
+  <!-- /header -->
+  <div data-role="content">
+    <form id="frmUserForm" action="">
+      <div data-role="fieldcontain">
+        <label for="txtFirstName">First Name: </label>
+        <input type="text" placeholder="First Name" name="txtFirstName"
+        data-mini="false" id="txtFirstName" value=""
+        required>
+      </div>
+      <div data-role="fieldcontain">
+        <label for="txtLastName">Last Name: </label>
+        <input type="text" placeholder="Last Name" name="txtLastName"
+        data-mini="false" id="txtLastName" value=""
+        required>
+      </div>
+      <div data-role="fieldcontain">
+        <label for="datBirthdate">Birthdate: </label>
+        <input type="date" name="datBirthdate" data-mini="false"
+        id="datBirthdate" value="" required>
+      </div>
+      <div data-role="fieldcontain">
+        <label for="changePassword">Edit Password: </label>
+        <input type="password" placeholder="New Password" name="changePassword"
+        data-mini="false" id="changePassword" value=""
+        required>
+      </div>
+      <div data-role="fieldcontain">
+        <label for="txtHealthCardNumber">Health Card Number: </label>
+        <input type="text" placeholder="Health Card Number"
+        name="txtHealthCardNumber" data-mini="false"
+        id="txtHealthCardNumber" value="" required>
+      </div>
+
+      <input type="submit" id="btnUserUpdate" data-icon="check"
+      data-iconpos="left" value="Update" data-inline="true">
+    </form>
+  </div>
+</div>
 
   <!-- Menu page -->
   <div data-role="page" id="pageMenu">
@@ -175,7 +141,7 @@
       data-iconpos="left" data-inline="true">Menu</a>
       <a href="#pageAbout" data-role="button" data-icon="info"
       data-iconpos="right" data-inline="true">Info</a>
-      <h1>Thyroid Cancer Aide</h1>
+      <h1>Blood Pressure Monitor</h1>
     </div>
     <div data-role="content">
       <div data-role="controlgroup">
@@ -259,8 +225,8 @@
     <p>&nbsp;&nbsp;100 microgram = .0001 gram</p>
   </div>
 
-  <!--Graph Page -->
-  <div data-role="page" id="pageGraph" class="test">
+   <!--Graph Page -->
+   <div data-role="page" id="pageGraph" class="test">
     <div data-role="header">
       <a href="#pageMenu" data-role="button" data-icon="bars"
       data-iconpos="left" data-inline="true">Menu</a>
@@ -270,10 +236,10 @@
     </div>
     <div class="panel panel-success">
       <div class="panel-heading">
-        <h3 class="panel-title">TSH vs Date</h3>
+        <h3 class="panel-title">Blood Pressure VS Age</h3>
       </div>
       <div class="panel-body">
-        <canvas id="GraphCanvas" width="500" height="500" style="border:1px solid #000000;">
+        <canvas id="cylinder" width="500" height="500" style="border:0px solid #000000;">
         </canvas>
       </div>
     </div>
